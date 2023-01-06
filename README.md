@@ -4,13 +4,11 @@
 The data is related with direct marketing campaigns of a Portuguese banking institution.
 The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.
 
-Pada kesempatan kali ini saya akan mencoba untuk melakukan eksplorasi data dari data Bank Portugis ini.
-Tujuan eksplorasi data kali ini ialah untuk mencari tau pola dari client yg tidak berlangganan deposito berjangka.
+<b>Dataset :</b> <a target='_blank'>https://www.kaggle.com/datasets/yufengsui/portuguese-bank-marketing-data-set</a>
 
-Untuk eksplorasi data kali ini akan saya lakukan dalam beberapa tahapan dan akan saya lakukan berdasarkan kelompok data.
-Eksplorasi awal ke target features - subscribed, lalu eksplorasi ke kelompok numerical dan terakhir ke kelompok categorical.
+<b>Dashboard :</b> <a target='_blank'>https://datastudio.google.com/reporting/7abd016a-5e05-4e53-829f-43aa9143ff92<a/>
 
-## FEATURE DESCRIPTION
+  ## FEATURE DESCRIPTION
 Input variables:
 
 Bank client data:

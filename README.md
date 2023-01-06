@@ -1,25 +1,44 @@
-# Online Retail
-The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.
+# BANK-MARKETING-CAMPAIGN-PREDICTION
 
-<b>Dataset :</b> <a target='_blank'>https://archive.ics.uci.edu/ml/datasets/online+retail</a>
+## BANK DATA
+The data is related with direct marketing campaigns of a Portuguese banking institution.
+The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.
 
-<b>Dashboard :</b> <a target='_blank'>https://datastudio.google.com/reporting/7abd016a-5e05-4e53-829f-43aa9143ff92<a/>
+Pada kesempatan kali ini saya akan mencoba untuk melakukan eksplorasi data dari data Bank Portugis ini.
+Tujuan eksplorasi data kali ini ialah untuk mencari tau pola dari client yg tidak berlangganan deposito berjangka.
 
-Number of Instances: 541909
+Untuk eksplorasi data kali ini akan saya lakukan dalam beberapa tahapan dan akan saya lakukan berdasarkan kelompok data.
+Eksplorasi awal ke target features - subscribed, lalu eksplorasi ke kelompok numerical dan terakhir ke kelompok categorical.
 
-Number of Attributes: 8
-
-Attribute information:
-
+## FEATURE DESCRIPTION
 Input variables:
-This is a sales transaction data set of UK-based e-commerce (online retail) for one year. This London-based shop has been selling gifts and homewares for adults and children through the website since 2007. Their customers come from all over the world and usually make direct purchases for themselves. There are also small businesses that buy in bulk and sell to other customers through retail outlet channels.
 
-1. TransactionNo (categorical): a six-digit unique number that defines each transaction. The letter “C” in the code indicates a cancellation.
-2. Date (numeric): the date when each transaction was generated.
-3. ProductNo (categorical): a five or six-digit unique character used to identify a specific product.
-4. Product (categorical): product/item name.
-5. Price (numeric): the price of each product per unit in pound sterling (£).
-6. Quantity (numeric): the quantity of each product per transaction. Negative values related to cancelled transactions.
-7. CustomerNo (categorical): a five-digit unique number that defines each customer.
-8. Country (categorical): name of the country where the customer resides.
+Bank client data:
 
+1 - age (numeric)<br>
+2 - job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student",
+                                   "blue-collar","self-employed","retired","technician","services") <br>
+3 - marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)<br>
+4 - education (categorical: "unknown","secondary","primary","tertiary")<br>
+5 - default: has credit in default? (binary: "yes","no")<br>
+6 - balance: average yearly balance, in euros (numeric)<br>
+7 - housing: has housing loan? (binary: "yes","no")<br>
+8 - loan: has personal loan? (binary: "yes","no")<br>
+
+Related with the last contact of the current campaign:
+
+9 - contact: contact communication type (categorical: "unknown","telephone","cellular")<br>
+10 - day: last contact day of the month (numeric)<br>
+11 - month: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")<br>
+12 - duration: last contact duration, in seconds (numeric)<br>
+
+Other attributes:
+
+13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)<br>
+14 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)<br>
+15 - previous: number of contacts performed before this campaign and for this client (numeric)<br>
+16 - poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")<br>
+
+Output variable (desired target):
+
+17 - y - has the client subscribed a term deposit? (binary: "yes","no")
